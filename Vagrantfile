@@ -9,11 +9,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Forward rails server port to your host machine
   #
-  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.network "forwarded_port", guest: 3000, host: 4000
 
   # Install linux packages
   #
-  config.vm.provision :shell, path: "https://github.com/orendon/vagrant-rails/raw/master/script/vagrant_bootstrap.sh", privileged: false
+  config.vm.provision :shell, path: "https://github.com/mopineyro/vagrant-rails/raw/master/script/vagrant_bootstrap.sh", privileged: false
 
   # Uncomment this line if you want to bundle install and setup/create database (optional)
   # The path: option accepts a script on your local filesystem in case you want to provide your own
